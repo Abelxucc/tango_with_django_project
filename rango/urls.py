@@ -5,7 +5,8 @@ app_name = 'rango'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('about/',views.about, name='about'),
-    path('media/', views.show_media, name='show_media'),
-    path('new/', views.new_view, name='new_view'),
+    path('about/', views.about, name='about'),
+    path('category/<slug:category_name_slug>/', views.show_category, name='show_category'),
 ]
+
+

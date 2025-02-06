@@ -140,3 +140,10 @@ __pypackages__/
 .DS_Store
 Thumbs.db
 ehthumbs.db
+tango_with_django_2_code-master/
+
+*/migrations/*.py
+*/migrations/*.pyc
+
+.venv1/
+*.swp

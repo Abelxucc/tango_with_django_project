@@ -48,7 +48,7 @@ ROOT_URLCONF = 'tango_with_django_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,3 +118,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Media files (for user-uploaded content)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = MEDIA_DIR
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver']
+
