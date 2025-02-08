@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My New Page</title>
-</head>
-<body>
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+{% block title_block %}
+    My New Page
+{% endblock %}
+{% block body_block %}
+ <!-- add inheritance -->
     <h1>{{ title }}</h1>
     <p>{{ content }}</p>
-</body>
-</html>
+{% endblock %}

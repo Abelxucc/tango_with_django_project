@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Rango About</title>
-</head>
-<body>
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+{% block title_block %}
+    About Rango
+{% endblock %}
+
+{% block body_block %}
+ <!-- add inheritance -->
     <h1>Rango says...</h1>
     <p>Here is the about page.</p>
-
-    <a href="{% url 'rango:index' %}">Back to Index</a>
 
     <p>This tutorial has been put together by {{ author_name }}</p>
 
     <img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" />
 
     <img src="/media/cat.jpg" alt="Picture of a Cat" />
-</body>
-</html>
+ <!-- add inheritance -->
+{% endblock %}

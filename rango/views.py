@@ -20,8 +20,9 @@ def index(request):
     return render(request, 'rango/index.html', context=context_dict)
 
 def about(request):
-    context_dict = {'author_name': 'Jiacheng Xu'}
-    return render(request, 'rango/about.html', context=context_dict)
+    print(request.method)
+    print(request.user)
+    return render(request, 'rango/about.html', {})
 
 def show_media(request):
     return render(request, 'rango/show_media.html', {'media_url': settings.MEDIA_URL})
