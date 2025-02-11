@@ -1,6 +1,6 @@
 import os
 
-from django.conf.global_settings import TEMPLATES, PASSWORD_HASHERS
+from django.conf.global_settings import TEMPLATES, PASSWORD_HASHERS, SESSION_EXPIRE_AT_BROWSER_CLOSE
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware', #this is designed to work flexibly with different ways to store session
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -126,7 +126,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = MEDIA_DIR
 LOGIN_URL = '/rango/login/'
-
-
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver']
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_EXPIRE_AT_BROWSER_CLOSE = 1209600
 
